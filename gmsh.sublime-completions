@@ -43,14 +43,6 @@
                 { "trigger": "Sleep", "contents":  "Sleep ${1:exp}"},   
                 { "trigger": "Merge", "contents":  "Merge ${1:filename}"},
 
-                // { "trigger": "Point(no.)=(x,y,z);", "contents":  "Point( no:= ${1:<>}) = { x:= ${2:<>}, y:= ${3:<>}, z:= ${4:<>}};"},
-                // { "trigger": "Delete{entities}", "contents":  "Delete{  := ${1:<>} }" },
-        //        { "trigger": "Point{list}", "contents":  "Point{ := ${1:<>}};" },
-        //        { "trigger": "Surface{list}", "contents":  "Surface{ := ${1:<>}};" },
-        //        { "trigger": "Line{list}", "contents":  "Line{ := ${1:<>}};" },
-        //        { "trigger": "Volume{list}", "contents":  "Volume{ := ${1:<>}};" }, 
-
-
         // Gmsh Text Completions     
 
                 "Transfinite", "Recombine", "Line", "Point", "Surface", "Volume", "Physical", "Extrude",
