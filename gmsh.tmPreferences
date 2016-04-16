@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Comments for gmsh</string>
+    <key>scope</key>
+    <string>source.gmsh</string>
+    <key>settings</key>
+    <dict>
+        <key>shellVariables</key>
+        <array>
+        	<dict>
+                <key>name</key>
+                <string>TM_COMMENT_START</string>
+                <key>value</key>
+                <string>//</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>TM_COMMENT_START_2</string>
+                <key>value</key>
+                <string>/* </string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>TM_COMMENT_END_2</string>
+                <key>value</key>
+                <string> */</string>
+            </dict>
+        </array>
+    </dict>
+    <key>uuid</key>
+    <string>b095c611-75c4-4280-af1f-72c1cac74826</string>
+</dict>
+</plist>
