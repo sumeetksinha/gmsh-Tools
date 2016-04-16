@@ -96,14 +96,14 @@
 		<key>Constants</key>
 		<dict>
 			<key>match</key>
-			<string>\b(lc|Pi|newp|newl|news|newv|newll|newsl|newreg|(-)?[0-9.]+|(-)?[0-9.]+e(-)?[0-9.]+)\b</string>
+			<string>\b(GMSH_MAJOR_VERSION|GMSH_MINOR_VERSION|GMSH_PATCH_VERSION|MPI_Size|MPI_Rank|Cpu|Memory|TotalMemory|lc|Pi|newp|newl|news|newv|newll|newsl|newreg|(-)?[0-9.]+|(-)?[0-9.]+e(-)?[0-9.]+)\b</string>
 			<key>name</key>
 			<string>constant.numeric.gmsh</string>
 		</dict>
 		<key>ControlKeywords</key>
 		<dict>
 			<key>match</key>
-			<string>\b(For|In|EndFor|If|EndIf|Else|ElseIf)\s*</string>
+			<string>\b(Include|Error|Printf|Exit|Abort|Call|Return|ElseIf|For|In|EndFor|If|EndIf|Else)\s*</string>
 			<key>name</key>
 			<string>keyword.control.gmsh</string>
 		</dict>
@@ -122,6 +122,10 @@
 				<dict>
 					<key>include</key>
 					<string>#Constants</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#SelfFunctions</string>
 				</dict>
 				<dict>
 					<key>include</key>
@@ -231,7 +235,7 @@
 		<key>NormalFunctions</key>
 		<dict>
 			<key>begin</key>
-			<string>(\b(Error|SetNumber|SetString|Acos|Asin|Atan|Atan2|Ceil|Cos|Cosh|Exp|Fabs|Fmod|Floor|Hypot|Log|Log10|Modulo|Rand|Round|Sqrt|Sin|Sinh|Tan|Tanh|Delete|Printf|Compound\s+Line|Compound\s+Surface|Compound\s+Volume|Split\s+Line|Physical\s+Point|Physical\s+Line|Physical\s+Surface|Physical\s+Volume)(\s*\())</string>
+			<string>(\b(SetNumber|SetString|Acos|Asin|Atan|Atan2|Ceil|Cos|Cosh|Exp|Fabs|Fmod|Floor|Hypot|Log|Log10|Modulo|Rand|Round|Sqrt|Sin|Sinh|Tan|Tanh|Delete|Compound\s+Line|Compound\s+Surface|Compound\s+Volume|Split\s+Line|Physical\s+Point|Physical\s+Line|Physical\s+Surface|Physical\s+Volume)(\s*\())</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -287,9 +291,9 @@
 		<key>OtherKeywords</key>
 		<dict>
 			<key>match</key>
-			<string>\b((Layers|Return|Point|Spline|CatmullRom|Circle|Ellipse|BSpline|Ruled\s+Surface|Plane\s+Surface|Volume|Line\s+Loop|Line|Surface\s+Loop|Surface))\b</string>
+			<string>\b((Layers|Point|Spline|CatmullRom|Circle|Ellipse|BSpline|Ruled\s+Surface|Plane\s+Surface|Volume|Line\s+Loop|Line|Surface\s+Loop|Surface))\b</string>
 			<key>name</key>
-			<string>keyword.other.gmsh</string>
+			<string>function.constant.gmsh</string>
 		</dict>
 		<key>PhysicalGroupTag</key>
 		<dict>
@@ -301,9 +305,9 @@
 		<key>SelfFunctions</key>
 		<dict>
 			<key>match</key>
-			<string>(\b(RelocateMesh|SetOrder|Print|Sleep|Call|SyatemCall|NonBlockingSystemCall|SetName|SyncModel|Macro|NewModel|Include|RefineMesh|Draw|Merge|Delete|BoundingBox|SetChanged|Exit|Abort|Show|Hide|CombinedBoundary|Boundary|Coherence|Transfinite\s+Line|Transfinite\s+Surface|Recombine\s+Surface|Recombine|)\b)</string>
+			<string>(\b(RelocateMesh|SetOrder|Print|Sleep|SyatemCall|NonBlockingSystemCall|SetName|SyncModel|Macro|NewModel|Include|RefineMesh|Draw|Merge|Delete|BoundingBox|SetChanged|Show|Hide|CombinedBoundary|Boundary|Coherence|Transfinite\s+Line|Transfinite\s+Surface|Recombine\s+Surface|Recombine|)\b)</string>
 			<key>name</key>
-			<string>support.function.gmsh</string>
+			<string>keyword.other.gmsh</string>
 		</dict>
 		<key>Strings</key>
 		<dict>

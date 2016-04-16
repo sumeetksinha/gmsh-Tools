@@ -4,7 +4,44 @@
         "completions":
         [
 
-        // Gmsh Commands 
+        // Gmsh Mathematical Built-in Functions 
+                { "trigger": "Acos", "contents":  "Acos(${1:exp})"},
+                { "trigger": "Asin", "contents":  "Asin(${1:exp})"},
+                { "trigger": "Atan", "contents":  "Atan(${1:exp})"},
+                { "trigger": "Atan2", "contents": "Atan2(${1:exp})"},
+                { "trigger": "Ceil", "contents":  "Ceil(${1:exp})"},
+                { "trigger": "Cos", "contents":  "Cos(${1:exp})"},
+                { "trigger": "Cosh", "contents":  "Cosh(${1:exp})"},
+                { "trigger": "Exp", "contents":  "Exp(${1:exp})"},
+                { "trigger": "Fabs", "contents":  "Fabs(${1:exp})"},
+                { "trigger": "Fmod", "contents":  "Fmod(${1:exp})"},
+                { "trigger": "Floor", "contents":  "Floor(${1:exp})"},
+                { "trigger": "Hypot", "contents": "Hypot(${1:exp})"},
+                { "trigger": "Log", "contents":  "Log(${1:exp})"},
+                { "trigger": "Log10", "contents":  "Log10(${1:exp})"},
+                { "trigger": "Modulo", "contents":  "Modulo(${1:exp})"},
+                { "trigger": "Rand", "contents":  "Rand(${1:exp})"},
+                { "trigger": "Round", "contents": "Round(${1:exp})"},
+                { "trigger": "Sqrt", "contents":  "Sqrt(${1:exp})"},
+                { "trigger": "Sin", "contents":  "Sin(${1:exp})"},
+                { "trigger": "Sinh", "contents":  "Sinh(${1:exp})"},
+                { "trigger": "Tan", "contents":  "Tan(${1:exp})"},
+                { "trigger": "Tanh", "contents":  "Tanh(${1:exp})"},
+
+        // Loops, conditionals and macros
+
+                { "trigger": "ForLoop", "contents":  "For i In {0:${1:n}}\n\t${2:statement}\nEndFor"},
+                { "trigger": "IfCondition", "contents":  "If (${1:exp} )\n\t${2:statement}\nEndIf"},
+                { "trigger": "ElseIf", "contents":  "ElseIf (${1:exp})"},
+                { "trigger": "Call", "contents":  "Call ${1:macro}"},
+
+        // Gmsh Functions
+                { "trigger": "Printf", "contents":  "Printf (${1:exp})"},
+                { "trigger": "Error", "contents":  "Error (${1:exp})"},
+                { "trigger": "Include", "contents":  "Include ${1:file}"},
+                { "trigger": "SetName", "contents":  "SetName ${1:modelname}"},   
+                { "trigger": "Sleep", "contents":  "Sleep ${1:exp}"},   
+                { "trigger": "Merge", "contents":  "Merge ${1:filename}"},
 
                 // { "trigger": "Point(no.)=(x,y,z);", "contents":  "Point( no:= ${1:<>}) = { x:= ${2:<>}, y:= ${3:<>}, z:= ${4:<>}};"},
                 // { "trigger": "Delete{entities}", "contents":  "Delete{  := ${1:<>} }" },
@@ -12,13 +49,18 @@
         //        { "trigger": "Surface{list}", "contents":  "Surface{ := ${1:<>}};" },
         //        { "trigger": "Line{list}", "contents":  "Line{ := ${1:<>}};" },
         //        { "trigger": "Volume{list}", "contents":  "Volume{ := ${1:<>}};" }, 
-                { "trigger": "ForLoop", "contents":  "For i In {0:n}\n\t := ${1:<>}\nEndFor"},
-                { "trigger": "Ifconditio", "contents":  "If (  condition:= ${1:<>} )\n\t := ${2:<>}\nEndIf"},  
 
 
         // Gmsh Text Completions     
 
-                "Transfinite", "Recombine", "Line", "Point", "Surface", "Volume", "Physical", "Extrude"
+                "Transfinite", "Recombine", "Line", "Point", "Surface", "Volume", "Physical", "Extrude",
+                "GMSH_MAJOR_VERSION", "GMSH_MINOR_VERSION", "GMSH_PATCH_VERSION", "MPI_Size", "MPI_Rank", "Cpu", "Memory", "TotalMemory", 
+                "Pi", "newp", "newl", "news", "newv", "newll", "newsl", "newreg",
+                "Delete", "SyncModel", "NewModel", "BoundingBox", "SetChanged", "Draw", "Coherence",
+
+        // Gmsh keywords
+
+                "Return" ,"Abort", "Exit", 
 
         ]
         

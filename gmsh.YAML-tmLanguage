@@ -66,11 +66,11 @@ repository:
       '0': {name: support.function.gmsh}
 
   SelfFunctions:
-    name: support.function.gmsh
-    match: (\b(RelocateMesh|SetOrder|Print|Sleep|Call|SyatemCall|NonBlockingSystemCall|SetName|SyncModel|Macro|NewModel|Include|RefineMesh|Draw|Merge|Delete|BoundingBox|SetChanged|Exit|Abort|Show|Hide|CombinedBoundary|Boundary|Coherence|Transfinite\s+Line|Transfinite\s+Surface|Recombine\s+Surface|Recombine|)\b)
-  
+    name: keyword.other.gmsh
+    match: (\b(RelocateMesh|SetOrder|Print|Sleep|SyatemCall|NonBlockingSystemCall|SetName|SyncModel|Macro|NewModel|Include|RefineMesh|Draw|Merge|Delete|BoundingBox|SetChanged|Show|Hide|CombinedBoundary|Boundary|Coherence|Transfinite\s+Line|Transfinite\s+Surface|Recombine\s+Surface|Recombine|)\b)
+
   NormalFunctions:
-    begin: (\b(Error|SetNumber|SetString|Acos|Asin|Atan|Atan2|Ceil|Cos|Cosh|Exp|Fabs|Fmod|Floor|Hypot|Log|Log10|Modulo|Rand|Round|Sqrt|Sin|Sinh|Tan|Tanh|Delete|Printf|Compound\s+Line|Compound\s+Surface|Compound\s+Volume|Split\s+Line|Physical\s+Point|Physical\s+Line|Physical\s+Surface|Physical\s+Volume)(\s*\())
+    begin: (\b(SetNumber|SetString|Acos|Asin|Atan|Atan2|Ceil|Cos|Cosh|Exp|Fabs|Fmod|Floor|Hypot|Log|Log10|Modulo|Rand|Round|Sqrt|Sin|Sinh|Tan|Tanh|Delete|Compound\s+Line|Compound\s+Surface|Compound\s+Volume|Split\s+Line|Physical\s+Point|Physical\s+Line|Physical\s+Surface|Physical\s+Volume)(\s*\())
     beginCaptures:
       '0': {name: support.function.gmsh}
     patterns:
@@ -103,6 +103,7 @@ repository:
     - include: '#LineComments'
     - include: '#MultipleLineComments'
     - include: '#Constants'
+    - include: '#SelfFunctions'
     - include: '#OperatorKeywords'
     - include: '#ControlKeywords'
     - include: '#OtherKeywords'
@@ -111,7 +112,7 @@ repository:
 
   Constants:
     name: constant.numeric.gmsh
-    match: \b(lc|Pi|newp|newl|news|newv|newll|newsl|newreg|(-)?[0-9.]+|(-)?[0-9.]+e(-)?[0-9.]+)\b
+    match: \b(GMSH_MAJOR_VERSION|GMSH_MINOR_VERSION|GMSH_PATCH_VERSION|MPI_Size|MPI_Rank|Cpu|Memory|TotalMemory|lc|Pi|newp|newl|news|newv|newll|newsl|newreg|(-)?[0-9.]+|(-)?[0-9.]+e(-)?[0-9.]+)\b
 
   OperatorKeywords:
     name: keyword.operator.gmsh
@@ -119,11 +120,11 @@ repository:
 
   ControlKeywords:
     name: keyword.control.gmsh
-    match: \b(For|In|EndFor|If|EndIf|Else|ElseIf)\s*
+    match: \b(Include|Error|Printf|Exit|Abort|Call|Return|ElseIf|For|In|EndFor|If|EndIf|Else)\s*
 
   OtherKeywords:
-    name: keyword.other.gmsh
-    match: \b((Layers|Return|Point|Spline|CatmullRom|Circle|Ellipse|BSpline|Ruled\s+Surface|Plane\s+Surface|Volume|Line\s+Loop|Line|Surface\s+Loop|Surface))\b
+    name: function.constant.gmsh
+    match: \b((Layers|Point|Spline|CatmullRom|Circle|Ellipse|BSpline|Ruled\s+Surface|Plane\s+Surface|Volume|Line\s+Loop|Line|Surface\s+Loop|Surface))\b
 
   OtherConstants:
     name: keyword.other.gmsh
