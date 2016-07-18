@@ -1,0 +1,13 @@
+
+gmsh-Tools Plugin version 2.0.1 (2016-07-18)
+
+Thank you for installing the gmsh-Tools plugin!
+
+To learn about the features of this plugin and get updates, go to the Github page:
+
+https://github.com/SumeetSinha/gmsh-Tools
+
+
+Sumeet Kumar Sinha
+Gradute Student 
+University of California Davis
