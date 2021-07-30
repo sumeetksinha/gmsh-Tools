@@ -22,8 +22,6 @@ It is an sublime plugin for auto-completion and syntax coloring of ```.geo``` fi
 
 	
 ---
-[UCD CompGeoMech](http://sokocalo.engr.ucdavis.edu/~jeremic/)
 
-Created by: [Sumeet Kumar Sinha](http://www.sumeetsinha.in)
-
-Request for adding features at sumeet.kumar507@gmail.com
+Send your comments, bugs, issues and features to add to [Sumeet Kumar Sinha](http://www.sumeetksinha.com) at sumeet.kumar507@gmail.com. 
+Feel free to create issues on https://github.com/SumeetSinha/gmsh-Tools/issues
